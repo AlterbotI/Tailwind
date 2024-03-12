@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tailwind.css">
+
+
+
+</head>
+
+<body>
+
+
+    <header class="navbar bg-gray-400">
+        <!-- logo -->
+        <img src="img/Google_2015_logo.svg.png" alt="tesla logo"
+            class="h-[60] w-[60px] max-md:h-[60] max-md:w-[60px] max-sm:h-[80px] max-sm:w-[80px]" />
+
+        <!-- nav links -->
+        <div class="max-sm:hidden max-md:hidden">
+            <a href="#Home" class="nav_link ">Home</a>
+            <a href="#About" class="nav_link">About us</a>
+            <a href="#Contact" class="nav_link">Contact us</a>
+            <a href="#gallery" class="nav_link">Gallery</a>
+        </div>
+        <!-- mobile menu -->
+        <div class="md:hidden lg:hidden">
+            <button
+                class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
+                    <path
+                        d="M 2 9 L 2 11 L 48 11 L 48 9 L 2 9 z M 2 24 L 2 26 L 48 26 L 48 24 L 2 24 z M 2 39 L 2 41 L 48 41 L 48 39 L 2 39 z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="slider-container">
+        <div class="slider">
+            <!-- Slide 1 -->
+            <div class="slide slide-left max-sm:hidden max-md:hidden ">
+                <img src="img/Model3.jfif" alt="Slide 1">
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide slide-middle max-sm:flex sm:justify-center sm:items-center sm:w-[100%];">
+                <img src="img/ModelS.jfif" alt="Slide 2">
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide slide-right max-sm:hidden max-md:hidden">
+                <img src="img/ModelX.jfif" alt="Slide 3">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
