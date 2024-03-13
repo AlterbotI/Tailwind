@@ -1,43 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap")
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-html{
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-    font-family: "Montserrat", sans-serif;}
-
-.navbar{
-    @apply  flex items-center justify-between w-[100%] fixed top-0 left-0 right-0 z-10 h-[5.4rem] p-1 ;
-}
-.nav_link{
-    @apply text-2xl font-semibold text-[#181b21] mx-[0.8rem] px-[0.8rem] py-[0.4rem] rounded-[0.8rem] bg-transparent hover:bg-[#181b21] hover:bg-opacity-10 transition-all duration-300;
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
 }
 
+.navbar {
+  @apply lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between w-[100%] lg:fixed md:fixed md:top-0 md:left-0 md:right-0 md:z-10 md:h-[5.4rem] md:p-1 sm:grid sm:items-center sm:justify-center sm:fixed sm:top-0 sm:left-0 sm:right-0 sm:z-10 sm:p-2 sm:gap-4;
+}
+.nav_link {
+  @apply text-2xl font-semibold text-[#181b21] mx-[0.8rem] px-[0.8rem] py-[0.4rem] rounded-[0.8rem] bg-transparent hover:bg-[#181b21] hover:bg-opacity-10 transition-all duration-300;
+}
+.menu{
+  @apply m-3 p-3;
+}
 .slider-container {
-     @apply w-[100%] relative overflow-hidden justify-between items-center flex  ;
+  @apply w-[100%] relative overflow-hidden justify-between items-center flex;
 }
 .slider {
-    display: flex;
-    transition: transform 0.5s ease;
+  @apply flex flex-wrap ;
+  transition: transform 0.5s ease;
+  
 }
 .slide {
-    @apply lg:flex-[0_0_33.33%] lg:max-w-[33.33%] md:flex-[0_0_33.33%] md:max-w-[33.33%] box-border ;
-     /* Each slide takes 1/3 of the container */
+  @apply lg:flex-[0_0_33.33%] lg:max-w-[33.33%] box-border;
+  /* Each slide takes 1/3 of the container */
 }
 .slide img {
-    @apply  w-[100%] block;
+  @apply w-[100%] block;
 }
 /* Custom styles for each slide */
-.slide-left {
-    transform: scale(0.8); /* Make left slide smaller */
+@media only screen and (min-width: 1024px) {
+  .slide-left {
+    transform: scale(0.9);
+     /* Make left slide smaller */
+  }
 }
-.slide-right {
-    transform: scale(0.8); /* Make right slide smaller */
+@media only screen and (min-width: 1024px) {
+  .slide-right {
+    transform: scale(0.9);/* Make right slide smaller */
+  }
 }
-.slide-middle{
-transform: scale(1.2); 
-   /* Make middle slide larger */
+
+@media only screen and (min-width: 1024px) {
+  .slide-middle {
+    transform: scale(1.2);
+    z-index: 1;
+    /* Make middle slide larger */
+  }
+}
+
+
+@media only screen and (max-width: 640px)   {
+  .slide-left {
+    margin-bottom: 4rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+    .slide-right {
+      margin-bottom: 4rem;/* Make right slide smaller */
+    }
+  }
+  
+
+@media only screen and (max-width: 640px) {
+  .slide-middle {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+}
+
+@media only screen and (max-width: 800px)   {
+  .slide-left {
+    margin-bottom: 4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+    .slide-right {
+      margin-bottom: 4rem;/* Make right slide smaller */
+    }
+  }
+  
+
+@media only screen and (max-width: 800px) {
+  .slide-middle {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
 }
